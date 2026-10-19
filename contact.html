@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Ahad Hafeez</title>
+  <link rel="stylesheet" href="contact.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <a class="nav-logo" href="index.html">Ahad<span>.</span></a>
+      <nav class="site-nav">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="media.html">Media</a></li>
+          <li><a class="nav-link" href="register.html">Register</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li><a class="nav-link active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary" href="contact.html">Hire Me</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container text-center">
+        <p class="breadcrumb"><a href="index.html">Home</a> / Contact</p>
+        <h1>Get In Touch</h1>
+        <p class="subtitle">Have a project in mind or just want to say hello? I'd love to hear from you.</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-info-section">
+            <span class="eyebrow">Say Hello</span>
+            <h2>Let's Work Together</h2>
+            <p class="info-desc">
+              I'm currently open to freelance contracts and interesting collaborations. Drop me a message!
+            </p>
+
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div>
+                  <p class="info-label">Email</p>
+                  <a class="info-value" href="mailto:ahad@example.com">ahad@example.com</a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div>
+                  <p class="info-label">Location</p>
+                  <span class="info-value">Lahore, Pakistan</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                <div>
+                  <p class="info-label">Response Time</p>
+                  <span class="info-value">Within 24 hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-section">
+            <div class="form-success" id="successMessage" style="display: none;">
+              <h3>✅ Message sent successfully!</h3>
+              <p>Thanks for reaching out. I'll get back to you soon.</p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+              <p class="form-hint">Fields marked with <span class="required">*</span> are required.</p>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="name">Full Name <span class="required">*</span></label>
+                  <input class="form-control" type="text" id="name" required placeholder="Ahad Hafeez">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address <span class="required">*</span></label>
+                  <input class="form-control" type="email" id="email" required placeholder="ahad@example.com">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject <span class="required">*</span></label>
+                <input class="form-control" type="text" id="subject" required placeholder="Project enquiry...">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="message">Message <span class="required">*</span></label>
+                <textarea class="form-control" id="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+              </div>
+
+              <button class="btn btn-primary btn-full" type="submit">Send Message →</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <a class="nav-logo" href="index.html">Ahad<span>.</span></a>
+      <p class="footer-copy">&copy; 2026 Ahad Hafeez. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('successMessage');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
